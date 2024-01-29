@@ -1,0 +1,23 @@
+   Compiling exercise v0.1.0 (/Users/aradhya/workspace/comprehensive-rust/exercise)
+error[E0580]: `main` function has wrong type
+ --> exercise/src/main.rs:5:1
+  |
+5 | fn main(a: i32, b: i32, c: i32) {
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ incorrect number of function parameters
+  |
+  = note: expected signature `fn()`
+             found signature `fn(i32, i32, i32)`
+
+error[E0308]: mismatched types
+ --> exercise/src/main.rs:1:44
+  |
+1 | fn interproduct(a: i32, b: i32, c: i32) -> i32 {
+  |    ------------                            ^^^ expected `i32`, found `()`
+  |    |
+  |    implicitly returns `()` as its body has no tail or `return` expression
+2 |     a * b + b * c + c * a;
+  |                          - help: remove this semicolon to return this value
+
+Some errors have detailed explanations: E0308, E0580.
+For more information about an error, try `rustc --explain E0308`.
+error: could not compile `exercise` (bin "exercise") due to 2 previous errors
